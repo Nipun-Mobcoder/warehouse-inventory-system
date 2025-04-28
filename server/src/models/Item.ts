@@ -1,9 +1,10 @@
+import { PopulatedBin } from "@src/routes/inventoryRoutes";
 import mongoose, { Schema } from "mongoose";
 
-interface IItem {
+export interface IItem {
   sku: string;
   name: string;
-  bin: mongoose.Types.ObjectId;
+  bin: mongoose.Types.ObjectId | PopulatedBin;
   quantity: number;
   lastRestocked: Date;
 }

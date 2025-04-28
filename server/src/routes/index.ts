@@ -1,9 +1,12 @@
-import express, { Request, Response } from "express";
+import express from "express";
+import orderRouter from "./orderRoutes";
+import warehouseRouter from "./warehouseRoute";
+import inventoryRouter from "./inventoryRoutes";
 
 const router = express.Router();
 
-router.use("/", (_req: Request, res: Response) => {
-  res.send("Hello World");
-});
+router.use("/order", orderRouter);
+router.use("/warehouse", warehouseRouter);
+router.use("/inventory", inventoryRouter);
 
 export default router;

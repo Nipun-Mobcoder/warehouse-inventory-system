@@ -1,7 +1,7 @@
 type Node = {
   id: string;
   neighbors: string[];
-  type: "aisle" | "storage" | "charging";
+  type: "aisle" | "storage";
   x: number;
   y: number;
 };

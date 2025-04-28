@@ -15,7 +15,7 @@ export class SKUTrie {
 
   private _getAllSKUs(node: SKUTrieNode, prefix: string): string[] {
     let results: string[] = [];
-    
+
     if (node.isEnd) {
       results = [...results, ...node.locations];
     }
@@ -26,7 +26,6 @@ export class SKUTrie {
 
     return results;
   }
-
 
   insert(sku: string, location: string) {
     let node = this.root;
